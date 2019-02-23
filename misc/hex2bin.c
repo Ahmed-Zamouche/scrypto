@@ -52,8 +52,8 @@ unsigned char* hex2bin(char *hex, unsigned char *bin, int iLen, int *oLen) {
 		hex = hex + 2;
 		iLen -= 2;			
 	}	
-
-	if(iLen%2 != 0) {
+        
+	if(iLen < 0 || iLen%2 != 0) {
 		/* hex string is not a multiple of 2 in length */
 		return NULL;
 	}
